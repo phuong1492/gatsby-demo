@@ -7,7 +7,7 @@ import { Container } from 'react-bootstrap'
 import "../styles/main.css"
 export default function Home({ data }) {
   return (
-    <Layout>
+    <Layout current_path="/">
       <header className="masthead">
         <Container as="div" className="d-flex h-100 align-items-center">
           <div className="mx-auto text-center">

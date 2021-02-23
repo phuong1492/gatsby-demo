@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./header"
 
-export default function Layout({ children }) {
+export default function Layout({ children, current_path="random"}) {
   const data = useStaticQuery(
     graphql`
       query {
@@ -15,7 +15,6 @@ export default function Layout({ children }) {
       }
     `
   )
-  const current_path = window.location.pathname
   let headerClass = "navbar navbar-expand-lg navbar-light fixed-top navbar-shrink"
   let classContent = "padding-top-100"
   if (current_path === "/"){
